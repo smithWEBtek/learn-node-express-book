@@ -6,6 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+    .red-border {
+      border: 3px dashed red;
+      padding: 2px
+    }
+  </style>
   <title>Home</title>
 </head>
 
@@ -13,7 +20,25 @@
   <a href="./">home</a> |
   <a href="./about">about</a>
   <h1>Home</h1>
-  <a href="/public/img/logo.jpg"><img src="./public/img/logo.jpg"></a>
+  <div id='main'>
+    <a href="/public/img/logo.jpg"><img src="./public/img/logo.jpg"></a>
+    <button class='btn'>Add red border</button>
+  </div>
+  <script>
+    const mainDiv = document.getElementById('main')
+    const redBorderButton = document.querySelector('.btn')
+
+    redBorderButton.addEventListener('click', function (e) {
+      e.preventDefault()
+      if (mainDiv.classList.contains('red-border')) {
+        mainDiv.classList.remove('red-border')
+        redBorderButton.innerText = 'Add red border'
+      } else {
+        mainDiv.classList.add('red-border')
+        redBorderButton.innerText = 'Remove red border'
+      }
+    })
+  </script>
 </body>
 
 </html>
