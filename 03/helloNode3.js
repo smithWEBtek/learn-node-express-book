@@ -16,23 +16,25 @@ function serveStaticFile(res, path, contentType, responseCode) {
 }
 
 http.createServer(function (req, res) {
-  // res.writeHead(200, { 'Content-Type': 'text/plain' });
-  var path = req.url.replace(/\/?(?:\?.*)?$/, '')
-    .toLowerCase();
+  var path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase();
   switch (path) {
     case '':
-      serveStateFile(res, '/public/home.html', 'text/html');
+      serveStaticFile(res, '/public/home.html', 'text/html');
       break;
     case '/about':
       serveStaticFile(res, '/public/about.html', 'text/html');
       break;
-    case '/img/logo.jpg':
+    case '/public/img/logo.jpg':
       serveStaticFile(res, '/public/img/logo.jpg', 'image/jpeg');
+      break;
+    case '/public/img/smiley.gif':
+      serveStaticFile(res, '/public/img/smiley.gif', 'image/jpeg');
       break;
     default:
       serveStaticFile(res, '/public/404.html', 'text/html', 404);
       break;
   }
 }).listen(3000);
+// });
 
 console.log('Server started on 3000; ctl+C to terminate');
