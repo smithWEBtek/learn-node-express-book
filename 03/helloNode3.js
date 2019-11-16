@@ -30,11 +30,16 @@ http.createServer(function (req, res) {
     case '/public/img/smiley.gif':
       serveStaticFile(res, '/public/img/smiley.gif', 'image/jpeg');
       break;
+    case '/data':
+      serveStaticFile(res, '/public/data.json', 'application/json');
+      break;
+    case '/pdf':
+      serveStaticFile(res, '/public/NodeExpressBook.pdf', 'application/pdf');
+      break;
     default:
       serveStaticFile(res, '/public/404.html', 'text/html', 404);
       break;
   }
 }).listen(3000);
-// });
 
 console.log('Server started on 3000; ctl+C to terminate');

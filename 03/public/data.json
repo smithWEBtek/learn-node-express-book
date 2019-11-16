@@ -1,0 +1,14 @@
+  pets: [ 
+  {
+  name: 'fido',
+  type: 'dog'
+},
+  {
+  name: 'sparky',
+  type: 'cat'
+},
+  {
+  name: 'frank',
+  type: 'turtle'
+}
+]
