@@ -4,6 +4,7 @@ var http = require('http'),
 function serveStaticFile(res, path, contentType, responseCode) {
   if (!responseCode) responseCode = 200;
   fs.readFile(__dirname + path, function (err, data) {
+    console.log('__dirname: ', __dirname)
     if (err) {
       res.writeHead(500, { 'Content-Type': 'text/plain' });
       res.end('500 - Internal Error');
