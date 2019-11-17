@@ -1,0 +1,20 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smithWEBtek/meadowlark.git"
+  },
+  "author": "Ethan Brown-Web Development With Node Express",
+  "license": "ISC",
+  "dependencies": {
+    "doctoc": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
