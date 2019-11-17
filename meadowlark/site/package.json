@@ -11,5 +11,8 @@
     "url": "https://github.com/smithWEBtek/meadowlark.git"
   },
   "author": "Ethan Brown-Web Development With Node Express",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "doctoc": "^1.4.0"
+  }
 }
